@@ -1,7 +1,8 @@
 # Specifies base image and tag
 FROM python:3.7
-WORKDIR /
+#WORKDIR /
 
+COPY . .
 # Installs additional packages
 #RUN pip install pkg1 pkg2 pkg3
 
