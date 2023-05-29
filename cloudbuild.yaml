@@ -1,0 +1,16 @@
+# [START cloudbuild_python_yaml]
+# [START cloudbuild_python_dependencies_yaml]
+steps:
+  # Install dependencies
+  - name: python
+    entrypoint: pip
+    args: ["install", "-r", "requirements.txt", "--user"]
+# [END cloudbuild_python_dependencies_yaml]
+
+
+  # [START cloudbuild_python_image_yaml]
+  # Docker Build
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 
+           'us-central1-docker.pkg.dev/${PROJECT_ID}/${_ARTIFACT_REGISTRY_REPO}/myimage:${SHORT_SHA}', '.']
+  # [END cloudbuild_python_image_yaml]
