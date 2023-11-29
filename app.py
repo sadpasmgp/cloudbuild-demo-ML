@@ -38,7 +38,7 @@ UUID = generate_uuid()
 
 
 #Create CLoud storage bucket
-BUCKET_URI = f"gs://your-bucket-name-{PROJECT_ID}-unique"  # @param {type:"string"}
+BUCKET_URI = f"gs://slz-{PROJECT_ID}-unique"  # @param {type:"string"}
 
 ! gsutil mb -l $REGION -p $PROJECT_ID $BUCKET_URI
 
