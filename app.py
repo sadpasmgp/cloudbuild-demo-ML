@@ -26,6 +26,7 @@ REGION = "us-central1"  # @param {type: "string"}
 
 import random
 import string
+import os
 
 # TO Avoid duplication of naming convention, add a randomized 8 characters
 # Generate a uuid of length 8
